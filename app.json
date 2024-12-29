@@ -1,21 +1,25 @@
 {
   "expo": {
-    "name": "ankara_2",
+    "name": "Women ankara",
     "slug": "ankara_2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/a1.jpg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.boma.ankara"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/a1.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.boma.ankara",
+      "permissions": ["INTERNET", "ACCESS_NETWORK_STATE"],
+      "allowCleartextTraffic": true
     },
     "web": {
       "bundler": "metro",
@@ -27,15 +31,30 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/a1.jpg",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-5333424817197074~3674215614",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "bbcfec24-570c-420d-a5dc-bfcc4377f126"
+      }
     }
   }
 }
